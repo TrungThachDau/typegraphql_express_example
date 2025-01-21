@@ -1,0 +1,27 @@
+{
+  "name": "typegraphql-example",
+  "scripts": {
+    "dev": "ts-node-dev --no-notify --respawn --transpile-only src/index.ts"
+  },
+  "dependencies": {
+    "@apollo/server": "4.11.3",
+    "@prisma/client": "5.22.0",
+    "@prisma/extension-accelerate": "^1.2.1",
+    "class-validator": "0.14.1",
+    "graphql": "16.10.0",
+    "graphql-scalars": "1.24.0",
+    "reflect-metadata": "0.2.2",
+    "type-graphql": "2.0.0-rc.2"
+  },
+  "devDependencies": {
+    "@types/node": "22.10.5",
+    "@types/ws": "8.5.13",
+    "prisma": "5.22.0",
+    "ts-node": "10.9.2",
+    "ts-node-dev": "2.0.0",
+    "typescript": "5.7.3"
+  },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  }
+}
