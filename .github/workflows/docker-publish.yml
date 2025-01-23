@@ -22,13 +22,8 @@ jobs:
         username: ${{ secrets.DOCKER_HUB_USERNAME }}
         password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
 
-    - name: Create docker group if not exists
-      run: |
-        sudo groupadd docker || true
-        sudo usermod -aG docker $USER
-
     - name: Build Docker image
-      run: docker buildx build --platform linux/amd64 -t ${{ secrets.DOCKER_HUB_USERNAME }}/mini_app_bk:latest .
+      run:  docker buildx build --platform linux/amd64 -t ${{ secrets.DOCKER_HUB_USERNAME }}/mini_app_fe:latest .
 
     - name: Push Docker image
-      run: docker buildx build --platform linux/amd64 --push -t ${{ secrets.DOCKER_HUB_USERNAME }}/mini_app_bk:latest .
+      run: docker buildx build --platform linux/amd64 --push -t ${{ secrets.DOCKER_HUB_USERNAME }}/mini_app_fe:latest .
