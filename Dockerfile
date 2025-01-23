@@ -10,6 +10,7 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
+RUN chmod +x node_modules/.bin/ts-node-dev
 # Copy the entire project
 COPY . .
 
